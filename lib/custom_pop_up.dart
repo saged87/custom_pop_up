@@ -8,6 +8,7 @@ class CustomPopUp
   final EdgeInsets alertDialogOuterPadding;
   final EdgeInsets alertDialogContentPadding;
   final bool alertDialogIsScrollable;
+  final bool dismissible;
 
   final Widget? imageWidget;
   final Widget bodyWidget;
@@ -30,6 +31,7 @@ class CustomPopUp
     this.alertDialogOuterPadding = const EdgeInsets.all(10),
     this.alertDialogContentPadding = const EdgeInsets.all(10),
     this.alertDialogIsScrollable = true,
+    this.dismissible = true,
     required this.bodyWidget,
     this.imageWidget,
     this.underButtonsWidget,
@@ -80,7 +82,7 @@ class CustomPopUp
     );
   }
 
-  show(BuildContext context, {bool dismissible = false})
+  show(BuildContext context)
   {
     showDialog(
         barrierDismissible: dismissible,
