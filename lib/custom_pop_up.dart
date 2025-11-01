@@ -25,6 +25,7 @@ class CustomPopUp
   final VoidCallback? actionBtnOnClick;
   final double buttonsBorderRadius;
   final Color closeBtnFontColor;
+  final Color? actionBtnBackgroundColor;
   final double buttonsGap;
 
   CustomPopUp({
@@ -48,7 +49,8 @@ class CustomPopUp
     this.buttonsBorderRadius = 12,
     this.closeBtnFontColor = const Color(0xff000000),
     this.buttonsGap = 25,
-    this.backGroundColor
+    this.backGroundColor,
+    this.actionBtnBackgroundColor
 
   });
 
@@ -71,6 +73,7 @@ class CustomPopUp
       showCloseIcon: showCloseIcon,
       underButtonsWidget: underButtonsWidget,
       backGroundColor: backGroundColor,
+      actionBtnBackgroundColor: actionBtnBackgroundColor,
     );
   }
 
