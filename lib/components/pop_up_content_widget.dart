@@ -19,6 +19,7 @@ class PopUpContentWidget extends StatelessWidget {
   final double buttonsBorderRadius;
   final Color closeBtnFontColor;
   final double buttonsGap;
+  final Color? backGroundColor;
 
   const PopUpContentWidget({
     super.key,
@@ -37,11 +38,13 @@ class PopUpContentWidget extends StatelessWidget {
     this.buttonsBorderRadius = 12,
     this.closeBtnFontColor = const Color(0xff000000),
     this.buttonsGap = 25,
+    this.backGroundColor
   });
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      color: backGroundColor ?? Theme.of(context).colorScheme.secondary,
       constraints: BoxConstraints(
         maxWidth: 500
       ),
