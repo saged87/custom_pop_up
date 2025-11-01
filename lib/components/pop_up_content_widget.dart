@@ -86,7 +86,7 @@ class PopUpContentWidget extends StatelessWidget {
                   child: CustomButton(
                     textStyle: textStyle.copyWith(),
                     backGroundColor: actionBtnBackgroundColor ?? Theme.of(context).colorScheme.primary,
-                    verticalPadding: 15,
+                    verticalPadding: 18,
                     radius: buttonsBorderRadius,
                     fun: ()
                     {
@@ -109,7 +109,7 @@ class PopUpContentWidget extends StatelessWidget {
                   width: double.infinity,
                   margin: const EdgeInsets.symmetric(vertical: 15),
                   child: CustomButton(
-                    verticalPadding: 15,
+                    verticalPadding: 18,
                     textColor: closeBtnFontColor,
                     radius: buttonsBorderRadius,
                     backGroundColor: closeBtnColor,

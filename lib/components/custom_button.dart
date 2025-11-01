@@ -45,8 +45,9 @@ class CustomButton extends StatelessWidget
       ),
       onPressed: fun,
       child: titleWidget ?? Text(
-        title, style: textStyle?.copyWith(
-          color:click ? textColor! : Colors.black54,
+        title, style: textStyle.copyWith(
+          color: click ? textColor! : Colors.black54,
+          fontWeight: FontWeight.bold,
           fontSize: textSize
       ),),
     );
