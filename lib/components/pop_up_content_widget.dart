@@ -42,6 +42,9 @@ class PopUpContentWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      constraints: BoxConstraints(
+        maxWidth: 500
+      ),
       padding: const EdgeInsets.all(10),
       width: MediaQuery.of(context).size.width,
       child: Column(
