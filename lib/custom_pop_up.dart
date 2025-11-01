@@ -9,6 +9,7 @@ class CustomPopUp
   final EdgeInsets alertDialogContentPadding;
   final bool alertDialogIsScrollable;
   final bool dismissible;
+  final Color? backGroundColor;
 
   final Widget? imageWidget;
   final Widget bodyWidget;
@@ -47,6 +48,7 @@ class CustomPopUp
     this.buttonsBorderRadius = 12,
     this.closeBtnFontColor = const Color(0xff000000),
     this.buttonsGap = 25,
+    this.backGroundColor
 
   });
 
@@ -68,6 +70,7 @@ class CustomPopUp
       showCloseBtn: showCloseBtn,
       showCloseIcon: showCloseIcon,
       underButtonsWidget: underButtonsWidget,
+      backGroundColor: backGroundColor,
     );
   }
 
@@ -79,6 +82,7 @@ class CustomPopUp
       contentPadding: alertDialogContentPadding,
       outerPadding: alertDialogOuterPadding,
       scrollable: alertDialogIsScrollable,
+      backGroundColor: backGroundColor,
     );
   }
 
