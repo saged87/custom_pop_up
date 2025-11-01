@@ -27,6 +27,7 @@ class CustomPopUp
   final Color closeBtnFontColor;
   final Color? actionBtnBackgroundColor;
   final double buttonsGap;
+  final TextStyle textStyle;
 
   CustomPopUp({
     this.alertDialogActionButtons,
@@ -50,7 +51,8 @@ class CustomPopUp
     this.closeBtnFontColor = const Color(0xff000000),
     this.buttonsGap = 25,
     this.backGroundColor,
-    this.actionBtnBackgroundColor
+    this.actionBtnBackgroundColor,
+    this.textStyle = const TextStyle()
 
   });
 
@@ -74,6 +76,7 @@ class CustomPopUp
       underButtonsWidget: underButtonsWidget,
       backGroundColor: backGroundColor,
       actionBtnBackgroundColor: actionBtnBackgroundColor,
+      textStyle: textStyle,
     );
   }
 

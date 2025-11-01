@@ -15,7 +15,8 @@ class CustomButton extends StatelessWidget
         this.titleWidget,
         this.backGroundColor = Colors.blue,
         this.borderSide,
-        this.verticalPadding = 10
+        this.verticalPadding = 10,
+        this.textStyle = const TextStyle()
       });
 
   final void Function() fun;
@@ -28,6 +29,7 @@ class CustomButton extends StatelessWidget
   final Widget? titleWidget;
   final BorderSide? borderSide;
   final double verticalPadding;
+  final TextStyle textStyle;
 
   @override
   Widget build(BuildContext context)
@@ -43,7 +45,7 @@ class CustomButton extends StatelessWidget
       ),
       onPressed: fun,
       child: titleWidget ?? Text(
-        title, style: TextStyle(
+        title, style: textStyle?.copyWith(
           color:click ? textColor! : Colors.black54,
           fontSize: textSize
       ),),

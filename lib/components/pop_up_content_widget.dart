@@ -21,6 +21,7 @@ class PopUpContentWidget extends StatelessWidget {
   final double buttonsGap;
   final Color? backGroundColor;
   final Color? actionBtnBackgroundColor;
+  final TextStyle textStyle;
 
   const PopUpContentWidget({
     super.key,
@@ -40,7 +41,8 @@ class PopUpContentWidget extends StatelessWidget {
     this.closeBtnFontColor = const Color(0xff000000),
     this.buttonsGap = 25,
     this.backGroundColor,
-    this.actionBtnBackgroundColor
+    this.actionBtnBackgroundColor,
+    this.textStyle = const TextStyle()
   });
 
   @override
@@ -82,6 +84,7 @@ class PopUpContentWidget extends StatelessWidget {
                   width: double.infinity,
                   margin: const EdgeInsets.symmetric(vertical: 15),
                   child: CustomButton(
+                    textStyle: textStyle.copyWith(),
                     backGroundColor: actionBtnBackgroundColor ?? Theme.of(context).colorScheme.primary,
                     verticalPadding: 15,
                     radius: buttonsBorderRadius,
@@ -110,6 +113,7 @@ class PopUpContentWidget extends StatelessWidget {
                     textColor: closeBtnFontColor,
                     radius: buttonsBorderRadius,
                     backGroundColor: closeBtnColor,
+                    textStyle: textStyle.copyWith(),
                     fun: ()
                     {
                       Navigator.of(context).pop();
