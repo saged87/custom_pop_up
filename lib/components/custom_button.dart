@@ -8,7 +8,7 @@ class CustomButton extends StatelessWidget
         required this.fun,
         required this.title,
         this.click=true,
-        this.textColor = Colors.white,
+        this.textColor = Colors.black,
         this.padding,
         this.textSize = 15,
         this.radius = 12,
